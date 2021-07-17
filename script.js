@@ -3,9 +3,9 @@ var config = {
     heightByWidth : 1.5,
     lineWidth : 0.01,
     ballSize : 0.03,
-    ballSpeed : 2.0,
+    ballSpeed : 4.0,
     paddleYPos : 0.85,
-    paddleHeightByWidth : 0.3,
+    paddleHeightByWidth : 0.18,
     blockNumX : 10,
     blockNumY : 5,
     blockHeightByWidth : 0.5,
@@ -71,7 +71,7 @@ function processBlock(canvas, process){
 
 function init(canvas){
     setBall(canvas, canvas.width*0.5, -1);
-    paddle.width = canvas.width*0.1;
+    paddle.width = canvas.width*0.15;
     paddle.y = ball.y + canvas.width*config.ballSize;
     
 
@@ -209,7 +209,7 @@ function draw(canvas, ctx){
 
 function main(){
     var canvas = document.getElementById("canvas_src");
-    canvas.width = window.innerWidth;
+    canvas.width = window.innerWidth*0.5;
     canvas.height = window.innerHeight;
 
     var ctx = canvas.getContext("2d");
